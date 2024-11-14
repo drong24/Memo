@@ -9,17 +9,28 @@ import SwiftUI
 
 struct MemoDetail: View {
     
-    var memo : MemoModel
+    @Binding var memo : MemoModel
+    @StateObject var memoApp = MemoViewModel()
     
     var body: some View {
         VStack {
-            Text(memo.title)
-            Text(memo.content)
+            TextField("Memo Title", text: $memo.title)
+            TextEditor(text: $memo.content)
             
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing){
+                Button("Save", action: {
+                    memoApp.saveData(memo: memo)
+                    memo.title = ""
+                    memo.content = ""
+                    memo.timeDue = Date()
+                })
+            }
         }
     }
 }
 
 #Preview {
-    MemoDetail(memo: MemoModel(title: "title", content: "content", timeDue: Date()))
+    MemoDetail(memo: .constant(MemoModel(title: "title", content: "content", timeDue: Date())))
 }
