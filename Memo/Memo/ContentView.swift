@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var memoApp = MemoViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+
+        NavigationStack {
+            List {
+                ForEach(memoApp.memos) { memo in
+                    NavigationLink {
+                        MemoDetail()
+                    } label: {
+                        Text(memo.title)
+                    }
+                }
+            }
+            .onAppear() {
+                memoApp.fetchData()
+            }
         }
-        .padding()
     }
 }
 

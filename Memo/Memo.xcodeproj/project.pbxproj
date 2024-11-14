@@ -11,6 +11,12 @@
 		ABE2E8352CE56EAF00682C89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE2E8342CE56EAF00682C89 /* ContentView.swift */; };
 		ABE2E8372CE56EB000682C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE2E8362CE56EB000682C89 /* Assets.xcassets */; };
 		ABE2E83A2CE56EB000682C89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE2E8392CE56EB000682C89 /* Preview Assets.xcassets */; };
+		ABE2E8412CE56F3600682C89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABE2E8402CE56F3600682C89 /* GoogleService-Info.plist */; };
+		ABE2E8442CE570F800682C89 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ABE2E8432CE570F800682C89 /* FirebaseAnalytics */; };
+		ABE2E8462CE570F800682C89 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ABE2E8452CE570F800682C89 /* FirebaseFirestore */; };
+		ABE2E8482CE5743E00682C89 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE2E8472CE5743E00682C89 /* MemoModel.swift */; };
+		ABE2E84A2CE5753600682C89 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE2E8492CE5753600682C89 /* MemoViewModel.swift */; };
+		ABE2E84C2CE5767200682C89 /* MemoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE2E84B2CE5767200682C89 /* MemoDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,10 @@
 		ABE2E8342CE56EAF00682C89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ABE2E8362CE56EB000682C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE2E8392CE56EB000682C89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABE2E8402CE56F3600682C89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABE2E8472CE5743E00682C89 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		ABE2E8492CE5753600682C89 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
+		ABE2E84B2CE5767200682C89 /* MemoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABE2E8442CE570F800682C89 /* FirebaseAnalytics in Frameworks */,
+				ABE2E8462CE570F800682C89 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,10 @@
 			children = (
 				ABE2E8322CE56EAF00682C89 /* MemoApp.swift */,
 				ABE2E8342CE56EAF00682C89 /* ContentView.swift */,
+				ABE2E84B2CE5767200682C89 /* MemoDetail.swift */,
+				ABE2E8492CE5753600682C89 /* MemoViewModel.swift */,
+				ABE2E8472CE5743E00682C89 /* MemoModel.swift */,
+				ABE2E8402CE56F3600682C89 /* GoogleService-Info.plist */,
 				ABE2E8362CE56EB000682C89 /* Assets.xcassets */,
 				ABE2E8382CE56EB000682C89 /* Preview Content */,
 			);
@@ -83,6 +99,10 @@
 			dependencies = (
 			);
 			name = Memo;
+			packageProductDependencies = (
+				ABE2E8432CE570F800682C89 /* FirebaseAnalytics */,
+				ABE2E8452CE570F800682C89 /* FirebaseFirestore */,
+			);
 			productName = Memo;
 			productReference = ABE2E82F2CE56EAF00682C89 /* Memo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,9 @@
 				Base,
 			);
 			mainGroup = ABE2E8262CE56EAF00682C89;
+			packageReferences = (
+				ABE2E8422CE570F800682C89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = ABE2E8302CE56EAF00682C89 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +150,7 @@
 			files = (
 				ABE2E83A2CE56EB000682C89 /* Preview Assets.xcassets in Resources */,
 				ABE2E8372CE56EB000682C89 /* Assets.xcassets in Resources */,
+				ABE2E8412CE56F3600682C89 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABE2E84A2CE5753600682C89 /* MemoViewModel.swift in Sources */,
 				ABE2E8352CE56EAF00682C89 /* ContentView.swift in Sources */,
+				ABE2E84C2CE5767200682C89 /* MemoDetail.swift in Sources */,
+				ABE2E8482CE5743E00682C89 /* MemoModel.swift in Sources */,
 				ABE2E8332CE56EAF00682C89 /* MemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +369,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ABE2E8422CE570F800682C89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABE2E8432CE570F800682C89 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABE2E8422CE570F800682C89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		ABE2E8452CE570F800682C89 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABE2E8422CE570F800682C89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABE2E8272CE56EAF00682C89 /* Project object */;
 }
