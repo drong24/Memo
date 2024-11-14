@@ -16,7 +16,7 @@ struct ContentView: View {
             List {
                 ForEach(memoApp.memos) { memo in
                     NavigationLink {
-                        MemoDetail()
+                        MemoDetail(memo: memo)
                     } label: {
                         Text(memo.title)
                     }

@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct MemoDetail: View {
+    
+    var memo : MemoModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(memo.title)
+            Text(memo.content)
+            
+        }
     }
 }
 
 #Preview {
-    MemoDetail()
+    MemoDetail(memo: MemoModel(title: "title", content: "content", timeDue: Date()))
 }
