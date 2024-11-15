@@ -19,8 +19,7 @@ struct MemoDetail: View {
             TextField("Memo Title", text: $memo.title)
             DatePicker(
                 "Due Date:",
-                selection: $memo.timeDue,
-                displayedComponents: [.date]
+                selection: $memo.timeDue
             )
             TextEditor(text: $memo.content)
             

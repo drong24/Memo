@@ -26,7 +26,7 @@ struct ContentView: View {
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .foregroundStyle(Color.black)
-                                Text("Due: \(memo.timeDue.formatted(.iso8601.year().month().day()))")
+                                Text("Due: \(memo.timeDue.formatted())")
                                     .foregroundStyle(Color.black)
                                 Text(memo.content)
                                     .font(.footnote)
@@ -47,6 +47,7 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
                 .border(Color.black)
+                
                 Spacer()
                 Section {
                     NavigationLink {
