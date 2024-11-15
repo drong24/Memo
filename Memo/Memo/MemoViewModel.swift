@@ -68,4 +68,17 @@ class MemoViewModel : ObservableObject {
             }
         }
     }
+    
+    func deleteData(memo : MemoModel) {
+        if let id = memo.id {
+            db.collection("memos").document(id).delete()
+            { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Sucessfully added document.")
+                }
+            }
+        }
+    }
 }
