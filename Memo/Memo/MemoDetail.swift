@@ -17,6 +17,8 @@ struct MemoDetail: View {
     var body: some View {
         VStack {
             TextField("Memo Title", text: $memo.title)
+                .font(.title)
+                .fontWeight(.bold)
             DatePicker(
                 "Due Date:",
                 selection: $memo.timeDue
@@ -29,6 +31,9 @@ struct MemoDetail: View {
             ToolbarItem(placement: .topBarTrailing){
                 Button("Save", action: {
                     memoApp.saveData(memo: memo)
+                    memo.title = ""
+                    memo.timeDue = Date()
+                    memo.content = ""
                     presentationMode.wrappedValue.dismiss()
                 })
             }

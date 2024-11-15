@@ -28,6 +28,7 @@ struct ContentView: View {
                                                 .font(.title)
                                                 .fontWeight(.bold)
                                                 .foregroundStyle(Color.black)
+                                                .multilineTextAlignment(.leading)
                                             Text("Due: \(memo.timeDue.formatted())")
                                                 .foregroundStyle(Color.black)
                                             Text(memo.content)
