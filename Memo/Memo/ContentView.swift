@@ -56,7 +56,7 @@ struct ContentView: View {
                         NavigationLink {
                             MemoDetail(memo: $memo)
                         } label: {
-                            Text("New Note")
+                            Text("New Memo")
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
