@@ -26,7 +26,7 @@ struct MemoDetail: View {
             TextEditor(text: $memo.content)
             
         }
-        .padding(30)
+        .padding([.leading, .trailing], 30)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing){
                 Button("Save", action: {
